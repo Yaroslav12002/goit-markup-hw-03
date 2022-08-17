@@ -1,0 +1,366 @@
+:root {
+  --color-blue: #2196f3;
+  --color-white: #fff;
+  --color-white-alfa: #fff9;
+  --color-black: #000;
+  --color-main: #757575;
+  --color-footer-backgr: #2f303a;
+  --color-header: #212121;
+  --color-button: #f5f4fa;
+  --color-hero-button: #188ce8;
+}
+
+/* utilities */
+body {
+  color: var(--color-main);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+
+  outline: 2px solid tomato; /* для отладки*/
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.section-without-top {
+  padding-top: 0;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  color: var(--color-header);
+  text-decoration: none;
+}
+
+.hide {
+  visibility: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* logo */
+.logo-main {
+  color: var(--color-blue);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo-black {
+  color: var(--color-black);
+}
+
+.logo-white {
+  color: var(--color-white);
+}
+
+/* site nav  */
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+
+  color: var(--color-header);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--color-blue);
+}
+
+.site-nav .link.current {
+  color: var(--color-blue);
+}
+
+/* .site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}  правильне рішення, але є досить складним*/
+
+.site-nav .item + .item {
+  margin-left: 50px;
+} /* oldschool-рішення, але робочий варіант та його часто використовують */
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto; /* Заставляет тел и почту прижаться вправо в header*/
+
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts .link {
+  color: var(--color-main);
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--color-blue);
+}
+
+.contacts .item + .item {
+  margin-left: 50px;
+}
+
+/* hero */
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 200px;
+  color: var(--color-white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  outline: 2px solid tomato; /* для отладки*/
+}
+.hero {
+  background-color: var(--color-footer-backgr);
+  text-align: center;
+}
+
+.hero .button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 200px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.hero .button:hover,
+.hero .button:focus {
+  background-color: var(--color-hero-button);
+}
+
+/* section title */
+.section-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--color-header);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* features */
+.features-list {
+  display: flex;
+}
+
+.features-list .item + .item,
+.work-list .item + .item,
+.team-list .list-item + .list-item {
+  margin-left: 30px;
+}
+
+.features-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--color-header);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features-list p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* work examples */
+.work-list {
+  display: flex;
+  justify-content: center;
+}
+
+.work-list .title {
+  color: var(--color-header);
+}
+
+.section .section-title {
+  margin-bottom: 50px;
+}
+
+/* team */
+.team {
+  background-color: var(--color-button);
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-list .section-title {
+  color: var(--color-header);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 0.84;
+  text-align: center;
+}
+
+.team-list .list-item {
+  background-color: var(--color-white);
+}
+
+.team-list-img {
+  margin-bottom: 30px;
+}
+
+.list-item > .section-title {
+  margin-bottom: 10px;
+}
+.team-list p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* portfolio button */
+.filter-list .button {
+  /* color: var(--color-button); */
+  color: teal;
+  background-color: var(--color-blue);
+  border: none;
+  cursor: pointer;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-list .item + .item {
+  margin-left: 8px;
+}
+
+.filter-list .button {
+  color: var(--color-header);
+  background-color: var(--color-button);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+}
+
+.filter-list button:hover,
+.filter-list button:focus {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+/* portfolio examples */
+.examples-list-img {
+  margin-bottom: 20px;
+}
+
+.examples-list .title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: var(--color-header);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.examples-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.examples-list .item {
+  width: 370px;
+  margin-right: 30px;
+}
+
+.examples-list .item:nth-child(3) {
+  margin-right: 0;
+}
+
+.examples-list-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+
+  color: var(--color-main);
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+/* footer */
+.footer {
+  background-color: var(--color-footer-backgr);
+}
+
+.address {
+  font-style: normal;
+}
+
+.footer-list a {
+  color: var(--color-white);
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.footer-list-alfa a {
+  color: var(--color-white-alfa);
+}
+
+.footer-list a:hover,
+.footer-list a:focus,
+.footer-list-alfa a:hover,
+.footer-list-alfa a:focus {
+  color: var(--color-blue);
+}
