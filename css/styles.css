@@ -73,7 +73,7 @@ img {
   align-items: center;
 }
 
-.container.main-nav {
+.heading {
   border-bottom: 1px solid var(--color-header-border);
 }
 
@@ -86,6 +86,11 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+.logo-main {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .logo-black {
@@ -144,6 +149,8 @@ img {
 
 .contacts .link {
   color: var(--color-main);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .contacts .link:hover,
@@ -159,7 +166,8 @@ img {
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-  padding-top: 200px;
+  padding-left: 240px;
+  padding-right: 240px;
 
   color: var(--color-white);
   font-weight: 900;
@@ -169,6 +177,8 @@ img {
   text-transform: uppercase;
 }
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--color-footer-backgr);
   text-align: center;
 }
@@ -178,7 +188,6 @@ img {
   padding-bottom: 10px;
   padding-left: 32px;
   padding-right: 32px;
-  margin-bottom: 200px;
   border: 0;
   background-color: var(--color-blue);
   color: var(--color-white);
@@ -211,9 +220,11 @@ img {
   display: flex;
 }
 
-.features-list .item + .item,
-.work-list .item + .item,
-.team-list .list-item + .list-item {
+.features-list .item {
+  width: calc((100% - 30px) / 4);
+}
+
+.features-list .item + .item {
   margin-left: 30px;
 }
 
@@ -246,6 +257,11 @@ img {
   margin-bottom: 50px;
 }
 
+.work-list .item + .item,
+.team-list .list-item + .list-item {
+  margin-left: 30px;
+}
+
 /* team */
 .team {
   background-color: var(--color-button);
@@ -271,23 +287,26 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list-img {
-  margin-bottom: 30px;
-}
-
-.list-item > .section-title {
+.list-item .section-title {
   margin-bottom: 10px;
 }
+
 .team-list p {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+}
+
+.team-label {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* portfolio button */
 .filter-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .filter-list .item + .item {
@@ -295,7 +314,6 @@ img {
 }
 
 .filter-list .button {
-  margin-bottom: 50px;
   padding: 6px 22px;
   border: none;
   cursor: pointer;
@@ -379,7 +397,7 @@ img {
 
 .footer-logo {
   display: block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .address {
@@ -388,7 +406,7 @@ img {
 
 .footer-item,
 .footer-item-alfa:not(:last-child) {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .footer-list a {
